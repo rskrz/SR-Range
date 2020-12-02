@@ -1,0 +1,67 @@
+{
+  "name": "vuejsblanky",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint --ext .ts,.js,.vue .",
+    "format": "npx prettier --write \"{src,tests}/**/*.{ts,vue}\""
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "eslint-plugin-jest": "^23.18.0",
+    "jest": "^24.9.0",
+    "tachyons-sass": "^4.9.5",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^9.0.0",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@foundersclubsoftware/eslint-config-web": "^1.2.0",
+    "@types/jest": "^26.0.4",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-plugin-unit-jest": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@vue/test-utils": "^1.0.3",
+    "eslint": "^7.4.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "flush-promises": "^1.0.2",
+    "husky": "^4.2.5",
+    "jest-serializer-vue": "^2.0.2",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-resources-loader": "^1.3.2",
+    "typescript": "~3.9.3",
+    "vue-cli-plugin-style-resources-loader": "~0.1.4",
+    "vue-jest": "^3.0.6",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run lint"
+    }
+  },
+  "lint-staged": {
+    "{src,tests}.{ts,js,json,css,md,vue}": [
+      "npm run format"
+    ]
+  }
+}

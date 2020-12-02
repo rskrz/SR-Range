@@ -1,0 +1,4 @@
+h1 {
+  color: $primary-text-color; // Take the variable value and use as text color.
+  @extend .code, .f1; // Import other SASS classes written into this SASS class.
+}
